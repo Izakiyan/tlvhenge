@@ -1,13 +1,10 @@
-app.controller('hengeCtrl', function($scope, serviceHenge){
+app.controller('hengeCtrl', function($scope, serviceHenge) {
 
-  serviceHenge.getAll().then(function () {
-    serviceHenge.merge();
-
+    serviceHenge.getAll().then(function() {
+        serviceHenge.merge();
     });
 
     $scope.henge = serviceHenge.final;
-    
-
 });
 
 
